@@ -19,6 +19,7 @@
 			  
 			  start: (function(){	
 			  
+			  data.video_list( data.type );
 			  animate.page_in();
   			  
 			  }),
@@ -26,6 +27,8 @@
 			  end: (function(){
 			  
 			  animate.page_out();
+			  animate.list_out();
+			  
 			  
 			  })
 			  
@@ -46,13 +49,15 @@
 			  start: (function(){	
 			  
 			  animate.page_in();
+			  data.content("video");
   			  
 			  }),
 			  
 			  end: (function(){
 			  
 			  animate.page_out();
-			  
+			  animate.content_out();
+
 			  })
 			  
 			  });

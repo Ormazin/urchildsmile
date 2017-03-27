@@ -20,6 +20,7 @@
 			  start: (function(){	
 			  
 			  animate.page_in();
+			  remind.get();
   			  
 			  }),
 			  
@@ -52,7 +53,7 @@
 			  end: (function(){
 			  
 			  animate.page_out();
-			  
+ 			  
 			  })
 			  
 			  });

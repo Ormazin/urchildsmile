@@ -5,6 +5,54 @@
 			  
 			  articles_color: "",
 			  
+			  
+			  /************************** دخول التحميل *************************/  
+			  loading_in:(function(){
+			  $(".loading-body").show();	  
+			  Move(".loading-box").To({"transition":"opacity 500ms", "opacity":"1"});
+			  }),
+			  
+			  /**************************** خروج التحميل ***********************/  
+			  loading_out:(function(){
+			  Move(".loading-box").To({"opacity":"0","transition":"opacity 500ms"});
+			  setTimeout(function(){ $(".loading-body").hide();},500);	  
+			  }),
+			  
+			  
+			  /***************************دخول القوائم************************/  
+			  list_in:(function(){
+ 			  $(".articles_list_ajax , .video_list_ajax, .consult_list_ajax , .appbook_list_ajax ").css({"opacity":"1","transition":"opacity 500ms"}); 
+			  
+			  }),
+			  
+			  /***************************خروج القوائم************************/  
+			  list_out:(function(){
+			  $(".articles_list_ajax , .video_list_ajax, .consult_list_ajax , .appbook_list_ajax ").css({"opacity":"0","transition":"opacity 500ms"}); 
+			  }), 
+			  
+			  
+			  /***************************خروج القوائم************************/  
+			  content_in:(function(){
+			  $(".fullcontent").css({"opacity":"1","transition":"opacity 500ms"}); 
+			  }), 
+			  
+			  /***************************خروج القوائم************************/  
+			  content_out:(function(){
+			  $(".fullcontent").css({"opacity":"0","transition":"opacity 500ms"}); 
+			  }),
+			  
+			  /*************************** دخول ارسال استشارة ************************/  
+			  consult_in:(function(){
+			  $(".consult_send").show(); 
+			  }), 
+			  
+			  /***************************خروج القوائم************************/  
+			  consult_out:(function(){
+			  setTimeout((function(){$(".consult_send").hide(); }),1000);
+			  }), 
+			  
+		 
+			  
 			  /**************************************************/
 			  page_color: (function( color ){
 			  

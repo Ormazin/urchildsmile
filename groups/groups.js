@@ -12,6 +12,8 @@
 			  
 			  animate.group_in();
 			  animate.page_color("#dceff5");
+			  animate.list_out();
+			  animate.loading_out();
 			 
  
 			  }),
@@ -62,13 +64,16 @@
 			  start: (function(){
 			  
 			  animate.group_in();
-			  animate.page_color("#df624c");
+ 			  data.video_list( data.type );
+			  
+			  animate.page_color("#c0392b");
   
 			  }),
 			  
 			  
 			  end: (function(){
  			  animate.group_out();
+			  animate.list_out();
 			  
 			  }) 
 			  
@@ -106,6 +111,7 @@
 			  start: (function(){
 			  
 			  animate.group_in();
+			  data.appbook_list( data.type );
 			  animate.page_color("#4a4a4a");
   
 			  }),
@@ -113,6 +119,7 @@
 			  
 			  end: (function(){
  			  animate.group_out();
+			  animate.list_out();
 			  
 			  }) 
 			  
@@ -129,6 +136,7 @@
 			  
 			  animate.group_in();
 			  animate.page_color("#1abc9c");
+			  remind.get();
   
 			  }),
 			  

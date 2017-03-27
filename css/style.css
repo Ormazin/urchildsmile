@@ -33,7 +33,7 @@
 
 }
 .cssload-loading i:nth-child(2){
-	background: rgb(58,186,165);
+	background: #48D1FF;
 	margin-left: -4px;
 	animation:cssload-loading-ani1 0.7s ease-in-out 0.345s infinite;
 		-o-animation:cssload-loading-ani1 0.7s ease-in-out 0.345s infinite;
@@ -41,7 +41,7 @@
 		-webkit-animation:cssload-loading-ani1 0.7s ease-in-out 0.345s infinite;
 		-moz-animation:cssload-loading-ani1 0.7s ease-in-out 0.345s infinite;
 }
-
+ 
 
 @keyframes cssload-loading-ani1{
 	70%{
@@ -90,7 +90,7 @@
 			  a{ color: inherit; text-decoration: none;} 
 			  
 			  html{height:100%;}
-			  img{ max-width: 250px; max-height:300px; background:#CCC;  }
+			  img{ max-width: 250px; max-height:300px; background:#CCC; text-align:center;  }
 			  body{
 			  background-image:  url(../img/background.png);
 			  background-size: cover;
@@ -127,7 +127,7 @@
  			  
 			   #cover{ width:100%; height:100%; position:fixed; top:0px; right:0px; z-index:10000; display:none;   }
 			  
-			  .loading-body{ width:100%; height:100%; position: fixed;  top:0px; right:0px; z-index:505;   display: none; } 
+			  .loading-body{ width:100%; height:calc(100% - 75px); position: fixed;  top:0px; right:0px; z-index:505;   display: none; } 
 			  .loading-box{
 			   width:100px; height:100px; background-color:#FFF; 
 			   position:absolute; top:calc(50% - 50px);right:calc(50% - 50px);
@@ -144,7 +144,7 @@
 			  .back-box{ width:100%; height:65px; position:absolute; bottom:0px; color:#FFF; pa }
 			  .back-box table{ width:90%; height:100%; margin-right:10px; margin-left:10px;}
 			  .back-title{ font-size:24px; }
-			  .back-icon{ font-size:30px; }
+			  .back-icon{ font-size:40px;   }
 			  
 			  .back-line{ width:100%; height:3px; background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.1) ,rgba(255,255,255,0)); }
 			  
@@ -161,7 +161,7 @@
 			  width:80%; max-width:320px; height:40px;
 			  display:block; margin-bottom:15px; 
 			  border:2px solid #FFF; border-radius:50px;
-			  background-color: rgba(255,255,255,0.1) ; color:#FFF; font-size:14px;
+			  background-color: rgba(255,255,255,0.1) ; color:#FFF; font-size:18px;
 			  padding:10px;
 			  
 			  }
@@ -234,6 +234,34 @@ input[type="date"]:valid::before {
 			  
 			  .options img{ width:70px; height:70px; background:none; margin-top:6px;}
 			  
+			  .articles_info_box{
+			   width:100%; height:120px;
+			   position:absolute; top:0px; z-index:3;
+			   
+			   color:#FFF; 
+			   }
+			   .info_title{ font-size:20px; }
+			   .info_back{ font-size:25px; font-weight:900; }
+			   .info_box td{ padding-right: 15px; padding-left: 15px;}
+			   
+			   .fullcontent_body{
+			   width:90%; height:calc(100%); overflow-x: hidden  ;  overflow-y: scroll;  -webkit-overflow-scrolling: touch;
+			   padding:5%; direction:ltr;   
+			   position:absolute; top:120px;  text-align:center;
+			   text-align: center ; font-size:14px;
+			   opacity:1; z-index:2;
+			   background: rgba(255,255,255,1);
+			   }
+			   .fullcontent{
+			   text-align: justify;
+			   font-size:22px;
+			   width:90%;
+			   direction:ltr;
+			   padding:10px;
+			   position:absolute; left:0px;
+			   opacity:0;
+			   }
+			  
 			  
 			  
  
@@ -262,38 +290,29 @@ input[type="date"]:valid::before {
 			 .content_lists tr td{ }
 			 
 			 .content_lists_icon{font-size:30px; text-shadow:none; }
+			 .articles_list_ajax{ opacity:0;}
 			 
 			 
 			  
 			   /********* Articles Show **********/
-			  .articles_info_box{
-			   width:100%; height:120px;
-			   position:absolute; top:0px; z-index:3;
-			   
-			   color:#FFF; 
-			   }
-			   .articles_info_title{ font-size:20px; }
-			   .articles_info_back{ font-size:25px; font-weight:900; }
-			   .articles_info_box td{ padding-right: 15px; padding-left: 15px;}
+ 
+			   .articles_info_title{   }
+			   .articles_info_back{   }
+			   .articles_info_box td{ }
 			   
 			   .articles_fullcontent_body{
-			   width:90%; height:calc(100%); overflow-x: hidden  ;  overflow-y: scroll;  -webkit-overflow-scrolling: touch;
-			   padding:5%; direction:ltr;   
-			   position:absolute; top:120px;  text-align:center;
-			   text-align:justify ; font-size:14px;
-			   opacity:1; z-index:2;
-			   background: rgba(255,255,255,1);
+			  
 			   }
 			   .articles_fullcontent{
-			   text-align: justify;
-			   width:90%;
-			   direction:ltr;
-			   padding:10px;
-			   position:absolute; left:0px;
+			    
 			   }
 			   
 			   /*********** video ***********/
 			   .lnr-film-play{ font-size:70px; color:#fecd5e}
+			   .video_list_ajax{opacity:0;}
+			   
+			   /********* consult ***************/
+			   .consult_list_ajax{opacity:0;}
 			   
 			   
 			  /************* appbook ***********/
@@ -306,6 +325,8 @@ input[type="date"]:valid::before {
 			  .appbook_content{ margin-bottom:150px; padding:10px;}
 			  .appbook_title{ font-size:28px; color: #f1c40f; display:block; text-shadow:none;}
 			  .appbook_text{ font-size:20px; color: #fff; text-align:justify; }
+			  
+			  .appbook_list_ajax{opacity:0;}
 	 
 			   
 			   /************* remind ***********/

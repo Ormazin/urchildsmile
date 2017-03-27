@@ -43,6 +43,7 @@
 			  
 			  start: (function(){	
 			  
+			  data.articles_list( data.type );
 			  animate.page_in();
 			  animate.page_color( animate.articles_color );
    			  
@@ -51,6 +52,8 @@
 			  end: (function(){
 			  
 			  animate.page_out();
+			  animate.list_out();
+			  animate.loading_out();
 			  
 			  })
 			  
@@ -71,12 +74,14 @@
 			  start: (function(){	
 			  
 			  animate.page_in();
+			  data.content("articles");
   			  
 			  }),
 			  
 			  end: (function(){
 			  
 			  animate.page_out();
+			  animate.content_out();
 			  
 			  })
 			  

@@ -2,38 +2,51 @@
 			  
 			  var data = {
 			  
-			  content_id:null, content_title: null,  content_user:null, content_date:null, content_type:null,
+			  content_id:null, content_title: null,  content_user:null, content_date:null, type:null,
 			  
 			  
 			  
 			  /***************** دالة جلب قائمة الموضوعات *****************/
-			  list:(function( type ){
+			  articles_list:(function( type ){
 			  
-
+ 
 			  animate.loading_in();
 			  
  			  $.ajax({
-			  url: "https://pt-ideas.com/appsql/lists.php?type=" + type  , 
+			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
 			  success: (function(data){
 			  
-			  $(".body_content_lists").html(' ');
-			  $(".body_content_lists" ).scrollTop(0);
-			  $(".body_content_lists" ).scrollLeft( 1000 );
+			  $(".articles_list_ajax").html(' ');
+			  $(".articles_list_ajax" ).scrollTop(0);
+			  $(".articles_list_ajax" ).scrollLeft( 1000 );
 			  
 			   /* for(1) */
 			  for( var i=0; i < data.length; i++ ){
- 			  $(".body_content_lists").append('<table class="animated content_lists"> <tr> <td align="right" width="80%"> <span class="content_title">'+data[i].title+'</span> - <span class="content_user">'+data[i].user+'</span> </td> <td class="change_page" data-page_id="articles_show" data-content_id="'+data[i].id+'"  data-content_title="'+data[i].title+'"  data-content_user="'+data[i].user+'"  data-content_date="'+data[i].date+'" align="left" width="20%"> <span class="lnr lnr-chevron-down-circle animated content_lists_icon"></span> </td> </tr> </table>'); /*end html*/
+ 			  $(".articles_list_ajax").append('<table  class="change_page animated content_lists"  data-content_id="'+data[i].id+'"  data-content_title="'+data[i].title+'"  data-content_user="'+data[i].user+'"  data-content_date="'+data[i].date+'"  data-page_id="articles_show"> <tr> <td align="right" width="80%"> <span class="content_title">   '+data[i].title+'   </span> </td> <td  align="left" width="20%"> <span class="lnr lnr-chevron-down-circle animated content_lists_icon"></span> </td> </tr> </table>'); /*end html*/
+			  
+			  
+			   
+			  
+			  animate.list_in();
+			  animate.loading_out();
+			  
+			 
+			  
 
 			  
- 			  
 			  } /* end for(1) */
+			   
+			   	
+               $(".change_page").unbind("click");
+			   events.change_page();
+			  
 			 
 			 
-			  animate.loading_out();
-			  setTimeout(function(){animate.list_in();},500);
+			 
+			   
 			  
 			  }),
 			  error: (function(){
@@ -56,31 +69,220 @@
 			  
 			  }), /* End List Function */
 			  
-			  /***************** دالة جلب قائمة الموضوعات *****************/
-			  content:(function(){
 			  
-
+			  /***************** دالة جلب قائمة الفيديوات *****************/
+			  video_list:(function( type ){
+			  
+ 
 			  animate.loading_in();
- 			  
- 			  $(".articles_info_title").text( data.content_title );
-			  $(".articles_info_user").text( data.content_user );
-			  $(".articles_info_date").text( data.content_date );
 			  
-			  
-			  $.ajax({
-			  url: "https://pt-ideas.com/appsql/content.php?post_id=" + data.content_id  , 
+ 			  $.ajax({
+			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
 			  success: (function(data){
 			  
-			  $(".articles_fullcontent").html( data[0].content );
-			  $( ".articles_fullcontent_body" ).scrollTop(0);
+			  $(".video_list_ajax").html(' ');
+			  $(".video_list_ajax" ).scrollTop(0);
+			  $(".video_list_ajax" ).scrollLeft( 1000 );
+			  
+			   /* for(1) */
+			  for( var i=0; i < data.length; i++ ){
+ 			  $(".video_list_ajax").append('<table class="animated content_lists change_page"  data-content_id="'+data[i].id+'"  data-content_title="'+data[i].title+'"  data-content_user="'+data[i].user+'"  data-content_date="'+data[i].date+'"  data-page_id="video_show"> <tr> <td align="right" width="80%"> <span class="content_title"> '+data[i].title+' </span>  </td> <td class=""align="left" width="20%"> <span class="lnr lnr-film-play animated content_lists_icon"></span> </td> </tr> </table>'); /*end html*/
+			  
+			  
+			  animate.list_in();
+			  animate.loading_out();
+
+			  
+ 			  
+			  } /* end for(1) */
+			  $(".change_page").unbind("click");
+			   events.change_page();
+			 
+			 
+			   
+			  
+			  }),
+			  error: (function(){
+			  
+			  
+			  alert("لا يوجد اتصال بالانترنت");
+			  animate.loading_out();
+			  setTimeout(function(){animate.list_in();},500);
+			  
+			  
+			  }) /* end success */
+			  
+			  
+			  });/* End Ajax */
+			  
+			  
+			  
+			  
+ 
+			  
+			  }), /* End List Function */
+			  
+			  /***************** دالة جلب قائمة الاستشارات *****************/
+			  consult_list:(function( type ){
+			  
+ 
+			  animate.loading_in();
+			  
+ 			  $.ajax({
+			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
+ 			  type: 'GET',
+			  crossDomain: true,
+			  dataType: 'json',
+			  success: (function(data){
+			  
+			  $(".consult_list_ajax").html(' ');
+			  $(".consult_list_ajax" ).scrollTop(0);
+			  $(".consult_list_ajax" ).scrollLeft( 1000 );
+			  
+			   /* for(1) */
+			  for( var i=0; i < data.length; i++ ){
+ 			  $(".consult_list_ajax").append('<table class="animated content_lists change_page"  data-content_id="'+data[i].id+'"  data-content_title="'+data[i].title+'"  data-content_user="'+data[i].user+'"  data-content_date="'+data[i].date+'"  data-page_id="consult_show"> <tr> <td align="right" width="80%"> <span class="content_title">   '+data[i].title+'   </span> </td> <td class="" align="left" width="20%"> <span class="lnr lnr-chevron-down-circle animated content_lists_icon"></span> </td> </tr> </table>'); /*end html*/
+			  
+			  
+			  animate.list_in();
+			  animate.loading_out();
+
+			  
+ 			  
+			  } /* end for(1) */
+			  
+			  $(".change_page").unbind("click");
+			   events.change_page();
+			 
+			 
+			   
+			  
+			  }),
+			  error: (function(){
+			  
+			  
+			  alert("لا يوجد اتصال بالانترنت");
+			  animate.loading_out();
+			  setTimeout(function(){animate.list_in();},500);
+			  
+			  
+			  }) /* end success */
+			  
+			  
+			  });/* End Ajax */
+			  
+			  
+			  
+			  
+ 
+			  
+			  }), /* End List Function */
+			  
+			  /***************** دالة جلب قائمة المستشارين *****************/
+			  appbook_list:(function( type ){
+			  
+ 
+			  animate.loading_in();
+			  
+ 			  $.ajax({
+			  url: "https://urchildsmile.com/appsql/appbook.php?type=" + type  , 
+ 			  type: 'GET',
+			  crossDomain: true,
+			  dataType: 'json',
+			  success: (function(data){
+			  
+			  $(".appbook_list_ajax").html(' ');
+			  $(".appbook_list_ajax" ).scrollTop(0);
+			  $(".appbook_list_ajax" ).scrollLeft( 1000 );
+			  
+			   /* for(1) */
+			  for( var i=0; i < data.length; i++ ){
+ 			  $(".appbook_list_ajax").append('<table class="appbook_lists"> <tr> <td align="right" width="80%"> <span class="appbook_title">  '+data[i].title+'</span> <span class="appbook_text"> '+data[i].content+' </span> </td> </tr> </table>'); /*end html*/
+			  
+			  
+			  animate.list_in();
+			  animate.loading_out();
+
+			  
+ 			  
+			  } /* end for(1) */
+			  
+			  
+			 
+			 
+			   
+			  
+			  }),
+			  error: (function(){
+			  
+			  
+			  alert("لا يوجد اتصال بالانترنت");
+			  animate.loading_out();
+			  setTimeout(function(){animate.list_in();},500);
+			  
+			  
+			  }) /* end success */
+			  
+			  
+			  });/* End Ajax */
+			  
+			  
+			  
+			  
+ 
+			  
+			  }), /* End List Function */
+			  
+			  
+			  /***************** دالة جلب محتوى الموضوع *****************/
+			  content:(function( type ){
+			  
+
+			  animate.loading_in();
+ 			  
+  			  $("."+type+"_info_title").text(data.content_title);
+			  $("."+type+"_info_user").text(data.content_user);
+			  $("."+type+"_info_date").text(data.content_date);
+			  
+			  
+			  $.ajax({
+			  url: "https://urchildsmile.com/appsql/content.php?post_id=" + data.content_id  , 
+ 			  type: 'GET',
+			  crossDomain: true,
+			  dataType: 'json',
+			  success: (function(data){
+			  
+			  
+ 			  $("."+type+"_fullcontent").html( data[0].content  + "<br><br><br><br><br>");
+			  
+			  if( type == "video"  ){
+			  
+			  
+			  var url = data[0].content; 
+			  var regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+			  var match = url.match(regExp);
+			  if (match && match[2].length == 11) {
+			  
+			  var video_id = match[2];
+			  }else video_id = "vYn2La0Qwqw";
+			  
+			  
+			  
+			  
+			  $(".video_fullcontent").html(  '<center> <embed style=" margin-right:-10px;" width="100%" height="300"  src="https://www.youtube.com/embed/'+video_id+'"> </center> <br><br><br>');
+			  
+			  }
+			  
+			  
+			  $( "."+type+"_fullcontent_body" ).scrollTop(0);
 			  
 			  animate.loading_out();
 			  
 			  setTimeout(function(){
-			  animate.show_page_in();
+			  animate.content_in();
 			  },500);
 		
 			 
@@ -95,46 +297,7 @@
 			  
 			  }), /* End Content Function */
 			  
-			  /***************** دالة جلب قائمة الموضوعات *****************/
-			  ideas:(function( type ){
 			  
-			  
-			  animate.loading_in();
-			  
- 			  $.ajax({
-			  url: "https://pt-ideas.com/appsql/ideas.php?type=" + type  , 
- 			  type: 'GET',
-			  crossDomain: true,
-			  dataType: 'json',
-			  success: (function(data){
-			  
-			  $(".body_content_lists").html('<br>');
-			  $(".body_content_lists" ).scrollTop(0);
-			  
-			   /* for(1) */
-			  for( var i=0; i < data.length; i++ ){
-				  
- 			  $(".body_content_lists").append('<table class="ideas_lists"> <tr> <td align="right" width="80%"> <span class="ideas_title">'+data[i].title+'</span> <span class="ideas_text"> '+data[i].content+'</span> </td> </tr> </table><div class="ideas_line"></div>'); /*end html*/
-			  
-			  
-
-			  
- 			  
-			  } /* end for(1) */
-			 
-			 
-			  animate.loading_out();
-			  setTimeout(function(){animate.list_in();},500);
-			  
-			  }) /* end success */
-			  
-			  
-			  });/* End Ajax */
-			  
-			  
- 
-			  
-			  }) /* End Ideas Function */
 			  
 			  
 			  

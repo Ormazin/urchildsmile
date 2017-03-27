@@ -45,7 +45,7 @@
 			  group: "consult",
 			  
 			  start: (function(){	
-			  
+ 			  data.consult_list( data.type );
 			  animate.page_in();
 			  animate.page_color( "#e74c3c" );
   			  
@@ -54,6 +54,8 @@
 			  end: (function(){
 			  
 			  animate.page_out();
+			  animate.list_out();
+			  animate.loading_out();
 			  
 			  })
 			  
@@ -73,6 +75,7 @@
 			  start: (function(){	
 			  
 			  animate.page_in();
+			  animate.consult_in();
 			  animate.page_color( "#2ecc71" );
 			  
   			  
@@ -81,6 +84,7 @@
 			  end: (function(){
 			  
 			  animate.page_out();
+			  animate.consult_out();
 			  
 			  })
 			  
@@ -99,13 +103,15 @@
 			  start: (function(){	
 			  
 			  animate.page_in();
+			  data.content("consult");
   			  
 			  }),
 			  
 			  end: (function(){
 			  
 			  animate.page_out();
-			  
+			  animate.content_out();
+
 			  })
 			  
 			  });
