@@ -35,6 +35,7 @@
 			  
 			  get: (function(){
 			  
+			  if( localStorage.getItem("remind") !== null ) {
 			  var html = "";
 			  
 			  var data = JSON.parse( localStorage.getItem("remind") );
@@ -48,7 +49,9 @@
 			  });
 			  
 			  
-			  $("#remind_table").html( html );
+			  $("#remind_table").html( html ); 
+			  
+			  }
 			  
 			  
 			  
