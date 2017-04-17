@@ -261,6 +261,14 @@ input[type="date"]:valid::before {
 			   position:absolute; left:0px;
 			   opacity:0;
 			   }
+			   
+			   
+			   
+			   #language-body{
+			   width:100%; height:100%; 
+			   position:fixed; top:0px; right:0px;
+			   background: #04A7FF;
+ 			   }
 			  
 			  
 			  
@@ -349,6 +357,8 @@ input[type="date"]:valid::before {
 			  #about_content{ width:80%;   color: #fff; text-shadow:none;font-size:22px; text-align:justify; }
 			  .secial-icons{ font-size:27px; margin:10px;}
 			  #jasr_logo{width:160px; height:82px; background-image:url(../img/jasr_logo.png); background-size:160px 82px;}
+			   
+			   
 			   
 			  
 			  
