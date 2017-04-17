@@ -1,22 +1,22 @@
-<?xml version='1.5' encoding='utf-8'?>
-<widget id="team.jasr.PTideas" version="1.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>วศสำวใษ ุÝแ฿</name>
+๏ปฟ<?xml version='1.5' encoding='utf-8'?>
+<widget id="team.jasr.itqan" version="1.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>ุงุจุชุณุงู…ุฉ ุทููู</name>
     <description>
-       สุศํÞ ํฮฯใ วแใฬสใฺ Ýํใว ํฮี รำไวไ วแรุÝวแ
+      ูุฐุง ุงูุชุทุจูู ุฃูุดุฆ ูุฎุฏู…ุฉ ุงูู…ุฌุชู…ุน
     </description>
     <author email="Jasr.Team@gmail.com" href="http://Jasr.Team">
-        Jasr  Team
+        Jasr Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-	
-	    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
-    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+
+<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+
+<plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
 
 
-	
-	
+
 
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
@@ -67,6 +67,7 @@
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
     
+	
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -81,5 +82,4 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-
 </widget>
