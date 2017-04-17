@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="team.jasr.PTideas" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>PTideas</name>
+<?xml version='1.5' encoding='utf-8'?>
+<widget id="team.jasr.PTideas" version="1.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>ÇÈÊÓÇãÉ Øİáß</name>
     <description>
-       ÃİßÇÑ ÇáÚáÇÌ ÇáØÈíÚí.. ÃİßÇÑ ÊÚØí ÍíÇÉ
+       ÊØÈíŞ íÎÏã ÇáãÌÊãÚ İíãÇ íÎÕ ÃÓäÇä ÇáÃØİÇá
     </description>
     <author email="Jasr.Team@gmail.com" href="http://Jasr.Team">
-        Jasr Team
+        Jasr  Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
