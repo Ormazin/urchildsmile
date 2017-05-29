@@ -1,5 +1,5 @@
-<?xml version='1.6' encoding='utf-8'?>
-<widget id="team.jasr.urchildsmile" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+﻿<?xml version='1.6' encoding='utf-8'?>
+<widget id="team.jasr.childsmile" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>ابتسامة طفلك</name>
     <description>
        أنشئ هذا التطبيق لخدمة المجتمع فيما يخص أسنان الأطفال
