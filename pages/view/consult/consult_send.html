@@ -3,8 +3,24 @@
 <input id="consult_name"  type="text" placeholder="الاسم">
 <input id="consult_email" type="text"  placeholder="الإيميل">
 <input id="consult_title" type="text"  placeholder="عنوان الاستشارة">
-<input id="consult_doctor" type="text"  placeholder="اسم المستشار؟">
-<input id="consult_text" type="text"  placeholder="نص الاستشارة - مع توضيح هل هي خاصة أم عامة">
+
+<select id="consult_doctor" >
+<option value="" id="consult_doctor_lang" > الاستشاري  </option>
+<option value="د.ملاذ محمد الرفيع مصطفى">د.ملاذ محمد الرفيع مصطفى</option>
+<option value="د.رافي توغو">د.رافي توغو</option>
+<option value="د.إبراهيم الشهراني">د.إبراهيم الشهراني</option>
+</select>
+
+
+<select id="consult_type" >
+<option value="" id="do_you_pub"> هل تود عرض استشارتك في قسم الاستشارات؟ </option>
+<option value="نعم"> yes - نعم </option>
+<option value="لا"> no - لا </option>
+
+</select>
+
+
+<input id="consult_text" type="text"  placeholder="نص الاستشارة ">
 
 <table style="width:80%; max-width:320px;">
 <tr>

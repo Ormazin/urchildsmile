@@ -13,7 +13,7 @@
 			  animate.loading_in();
 			  
  			  $.ajax({
-			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
+			  url: "https://urchildsmile.com/appsql"+langen+"/lists.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
@@ -77,7 +77,7 @@
 			  animate.loading_in();
 			  
  			  $.ajax({
-			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
+			  url: "https://urchildsmile.com/appsql"+langen+"/lists.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
@@ -132,7 +132,7 @@
 			  animate.loading_in();
 			  
  			  $.ajax({
-			  url: "https://urchildsmile.com/appsql/lists.php?type=" + type  , 
+			  url: "https://urchildsmile.com/appsql"+langen+"/lists.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
@@ -188,7 +188,7 @@
 			  animate.loading_in();
 			  
  			  $.ajax({
-			  url: "https://urchildsmile.com/appsql/appbook.php?type=" + type  , 
+			  url: "https://urchildsmile.com/appsql"+langen+"/appbook.php?type=" + type  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',
@@ -199,16 +199,25 @@
 			  $(".appbook_list_ajax" ).scrollLeft( 1000 );
 			  
 			   /* for(1) */
+			   
+			   /*
 			  for( var i=0; i < data.length; i++ ){
- 			  $(".appbook_list_ajax").append('<table class="appbook_lists"> <tr> <td align="right" width="80%"> <span class="appbook_title">  '+data[i].title+'</span> <span class="appbook_text"> '+data[i].content+' </span> </td> </tr> </table>'); /*end html*/
+ 			  $(".appbook_list_ajax").append('<table class="appbook_lists"> <tr> <td align="right" width="80%"> <span class="appbook_title">  '+data[i].title+'</span> <span class="appbook_text"> '+data[i].content+' </span> </td> </tr> </table>');  
 			  
 			  
-			  animate.list_in();
-			  animate.loading_out();
+			 
+			 
 
 			  
  			  
-			  } /* end for(1) */
+			  }
+			  */
+			  
+			  
+			   /* end for(1) */
+			   
+			    animate.list_in();
+			    animate.loading_out();
 			  
 			  
 			 
@@ -249,7 +258,7 @@
 			  
 			  
 			  $.ajax({
-			  url: "https://urchildsmile.com/appsql/content.php?post_id=" + data.content_id  , 
+			  url: "https://urchildsmile.com/appsql"+langen+"/content.php?post_id=" + data.content_id  , 
  			  type: 'GET',
 			  crossDomain: true,
 			  dataType: 'json',

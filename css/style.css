@@ -10,6 +10,11 @@
 			  src: url(fonts/Changa-Light.ttf);
 			  }
 			  
+			  @font-face {
+			  font-family: 'c';
+			  src: url(fonts/c.ttf);
+			  }
+			  
 			  .cssload-container{
 	display: block;
 	margin:21px auto;
@@ -82,7 +87,7 @@
 			  -webkit-appearance: none; -moz-appearance: none; appearance: none;
 			  -webkit-tap-highlight-color: rgba(0,0,0,0);
  			  font-weight:100;
-			  font-family:Myriad;
+			  font-family:c,Myriad;
 			  text-shadow: 0px 1px rgba(0,0,0,0.2);
 			   
  			  }

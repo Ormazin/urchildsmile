@@ -1,21 +1,18 @@
-๏ปฟ<?xml version='1.5' encoding='utf-8'?>
-<widget id="team.jasr.urchildsmile" version="1.5.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ุงุจุชุณุงู…ุฉ ุทููู</name>
+<?xml version='1.6' encoding='utf-8'?>
+<widget id="team.jasr.PTideas" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>วศสำวใษ ุÝแ฿</name>
     <description>
-      ูุฐุง ุงูุชุทุจูู ุฃูุดุฆ ูุฎุฏู…ุฉ ุงูู…ุฌุชู…ุน ููู…ุง ูุฎุต ุฃุณูุงู ุงูุฃุทูุงู
+       สุศํÞ ํฮฯใ วแใฬสใฺ Ýํใว ํฮี รำไวไ วแรุÝวแ
     </description>
     <author email="Jasr.Team@gmail.com" href="http://Jasr.Team">
-        Jasr Team
+        Jasr  Team
     </author>
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-
-<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-
-<plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
-
-
+	
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" version="~1" />
+	<gap:plugin name="cordova-plugin-network-information" source="npm" version="~1" />
 
 
     <platform name="android">
@@ -68,18 +65,21 @@
     </platform>
     
 	
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+<access origin="*" />
+
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="tel:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" />
+<allow-intent href="geo:*" />
+<platform name="android">
+    <allow-intent href="market:*" />
+</platform>
+<platform name="ios">
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+</platform>
+
+
 </widget>
