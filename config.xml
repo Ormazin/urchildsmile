@@ -1,12 +1,13 @@
 <?xml version='1.6' encoding='utf-8'?>
 <widget id="team.jasr.PTideas" version="1.6.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>วศสำวใษ ุÝแ฿</name>
+    <name>ุงุจุชุณุงู…ุฉ ุทููู</name>
     <description>
-       สุศํÞ ํฮฯใ วแใฬสใฺ Ýํใว ํฮี รำไวไ วแรุÝวแ
+       ุฃูุดุฆ ูุฐุง ุงูุชุทุจูู ูุฎุฏู…ุฉ ุงูู…ุฌุชู…ุน ููู…ุง ูุฎุต ุฃุณูุงู ุงูุฃุทูุงู
     </description>
     <author email="Jasr.Team@gmail.com" href="http://Jasr.Team">
         Jasr  Team
     </author>
+	
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
